@@ -9,7 +9,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @Controller
-public class HelloController {
+public class MainController {
 
     @GetMapping("/hello")
     public String hello() {

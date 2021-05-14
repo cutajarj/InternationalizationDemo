@@ -3,7 +3,7 @@
 <title>Recipes</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
@@ -13,8 +13,41 @@
 
 <!-- Sidebar (hidden by default) -->
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
-    <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">
+        <span>X</span>
+    </a>
+    <a href="/?localeData=en" onclick="w3_close()" class="w3-bar-item w3-button">
+        <img src="usFlag.png" class="w3-image" width="50" alt="us">
+        <span th:text="#{mainpage.english_us}"></span>
+    </a>
+    <a href="/?localeData=en_GB" onclick="w3_close()" class="w3-bar-item w3-button">
+        <img src="gbFlag.png" class="w3-image" width="50" alt="gb">
+        <span th:text="#{mainpage.english_gb}"></span>
+    </a>
+    <a href="/?localeData=en_MT" onclick="w3_close()" class="w3-bar-item w3-button">
+        <img src="mtFlag.png" class="w3-image" width="50" alt="mt">
+        <span th:text="#{mainpage.english_mt}"></span>
+    </a>
+    <a href="/?localeData=it" onclick="w3_close()" class="w3-bar-item w3-button">
+        <img src="itFlag.png" class="w3-image" width="50" alt="it">
+        <span th:text="#{mainpage.italian}"></span>
+    </a>
+    <a href="/?localeData=fr" onclick="w3_close()" class="w3-bar-item w3-button">
+        <img src="frFlag.png" class="w3-image" width="50" alt="fr">
+        <span th:text="#{mainpage.french}"></span>
+    </a>
+    <a href="/?localeData=pt" onclick="w3_close()" class="w3-bar-item w3-button">
+        <img src="ptFlag.png" class="w3-image" width="50" alt="pt">
+        <span th:text="#{mainpage.portuguese}"></span>
+    </a>
+    <a href="/?localeData=pt_BR" onclick="w3_close()" class="w3-bar-item w3-button">
+        <img src="brFlag.png" class="w3-image" width="50" alt="br">
+        <span th:text="#{mainpage.portuguese_br}"></span>
+    </a>
+    <a href="/?localeData=es" onclick="w3_close()" class="w3-bar-item w3-button">
+        <img src="esFlag.png" class="w3-image" width="50" alt="es">
+        <span th:text="#{mainpage.spanish}"></span>
+    </a>
 </nav>
 
 <!-- Top menu -->
@@ -32,46 +65,46 @@
     <!-- First Photo Grid-->
     <div class="w3-row-padding w3-padding-16 w3-center" id="food">
         <div class="w3-half">
-            <img src="sandwich.jpg" style="width:100%">
-            <h3>The Perfect Tuna Melt</h3>
+            <img src="sandwich.jpg" alt="sandwich" style="width:100%">
+            <h3 th:text="#{mainpage.tunamelt}"></h3>
             <ul style="list-style-position: inside;">
-                <li>3 (6-ounce) cans solid, water-packed tuna, drained</li>
-                <li>3/4 cup mayonnaise</li>
-                <li>1/4 cup finely chopped cornichons or small kosher dill pickles</li>
-                <li>3 tablespoons minced red onion</li>
-                <li>2 tablespoons lemon juice</li>
-                <li>1 packed tablespoon minced fresh dill (optional)</li>
-                <li>2 teaspoons whole-grain mustard</li>
-                <li>1/4 teaspoon kosher salt</li>
-                <li>1/1 teaspoon black pepper</li>
-                <li>8 slices rye or sourdough bread, cut 1/2-inch thick</li>
-                <li>8 sandwich slices extra-sharp Cheddar (or 6 ounces shredded)</li>
-                <li>4 tablespoons softened unsalted butter, plus more as needed</li>
+                <li th:text="#{mainpage.tunamelt.ingredient1}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient2}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient3}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient4}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient5}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient6}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient7}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient8}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient9}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient10}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient11}"></li>
+                <li th:text="#{mainpage.tunamelt.ingredient12}"></li>
             </ul>
-            <p>Mix everything (except the cheese and butter) in a medium sized bowl with the drained tuna, mixing with a fork to break up the flakes.</p>
-            <p>Lay out the bread slices. Divide the tuna mixture onto the slices. Top each bread slice with the cheddar cheese.</p>
-            <p>Heat a large pan, on medium heat. Place the sandwiches, buttered side down, onto the pan. Gently spread butter on top of the bread slices. Cook for about 3 minutes.</p>
-            <p>Use a spoon to lift up the sandwiches and carefully turn them to the other side. Cook for another 3 minutes or so, until the second side is browned.</p>
+            <p th:text="#{mainpage.tunamelt.method1}"></p>
+            <p th:text="#{mainpage.tunamelt.method2}"></p>
+            <p th:text="#{mainpage.tunamelt.method3}"></p>
+            <p th:text="#{mainpage.tunamelt.method4}"></p>
         </div>
         <div class="w3-half">
-            <img src="harissa.jpg" style="width:100%">
-            <h3>Easy Harissa Paste</h3>
+            <img src="harissa.jpg" alt="harissa" style="width:100%">
+            <h3 th:text="#{mainpage.harissa}"></h3>
             <ul style="list-style-position: inside;">
-                <li>1 red pepper</li>
-                <li>1/2 tsp coriander seeds</li>
-                <li>1/2 tsp cumin seeds</li>
-                <li>1/2 tsp caraway seeds</li>
-                <li>1 1/2 tbsp olive oil</li>
-                <li>1 small red onion, coarsely chopped</li>
-                <li>3 cloves garlic, coarsely chopped</li>
-                <li>3 hot red chiles, seeded and coarsely chopped</li>
-                <li>1 1/2 tsp tomato paste</li>
-                <li>2 tbsp freshly squeezed lemon juice</li>
-                <li>1/2 tsp sal</li>
+                <li th:text="#{mainpage.harissa.ingredient1}"></li>
+                <li th:text="#{mainpage.harissa.ingredient2}"></li>
+                <li th:text="#{mainpage.harissa.ingredient3}"></li>
+                <li th:text="#{mainpage.harissa.ingredient4}"></li>
+                <li th:text="#{mainpage.harissa.ingredient5}"></li>
+                <li th:text="#{mainpage.harissa.ingredient6}"></li>
+                <li th:text="#{mainpage.harissa.ingredient7}"></li>
+                <li th:text="#{mainpage.harissa.ingredient8}"></li>
+                <li th:text="#{mainpage.harissa.ingredient9}"></li>
+                <li th:text="#{mainpage.harissa.ingredient10}"></li>
+                <li th:text="#{mainpage.harissa.ingredient11}"></li>
             </ul>
-            <p>Bake the peppers, until brown. Once baked, peal the outer layer of each pepper.</p>
-            <p>Soften the chili peppers in boiling water for approximately 10 minutes. Keep a couple of teaspoons of the chile water for later.</p>
-            <p>Blend everything together using a food processor until you have a smooth paste. To make the paste more liquid you can add the teaspoons of chili water.</p>
+            <p th:text="#{mainpage.harissa.method1}"></p>
+            <p th:text="#{mainpage.harissa.method2}"></p>
+            <p th:text="#{mainpage.harissa.method3}"></p>
         </div>
     </div>
 
@@ -79,17 +112,12 @@
 
     <!-- About Section -->
     <div class="w3-container w3-padding-32 w3-center">
-        <h3>About Us, The Three Chefs</h3><br>
+        <h3 th:text="#{mainpage.aboutus}"></h3><br>
         <img src="chefs.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
         <div class="w3-padding-32">
-            <h4><b>Roots are for trees; people have feet.</b></h4>
-            <h6><i>With Passion For Real, Good Food</i></h6>
-            <p>
-                We are a trio of self-proclaimed food artists. We travelled far and wide from the plains of the Kalahari desert to the feet of Himalayan giants
-                and discovered new spices, exotic flavours and French cheese ice-cream. We share all these new foods with you on our blog. We are all
-                travellers, just like you, and understand the language and cultural differences between places and that's why this page has been translated to so
-                many languages.
-            </p>
+            <h4><b th:text="#{mainpage.quote}"></b></h4>
+            <h6><i th:text="#{mainpage.passion}"></i></h6>
+            <p th:text="#{mainpage.aboutus.desc}"></p>
         </div>
     </div>
     <hr>
