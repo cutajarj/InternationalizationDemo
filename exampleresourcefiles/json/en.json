@@ -1,0 +1,14 @@
+{
+  "@metadata": {
+    "authors": [
+      "James Cutajar"
+    ],
+    "last-updated": "2021-05-18",
+    "locale": "en",
+    "message-documentation": "bla bla"
+  },
+  "mainpage": {
+    "greeting": "Hello",
+    "description": "This is a cookie"
+  }
+}
