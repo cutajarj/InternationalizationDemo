@@ -1,0 +1,7 @@
+# This is a comment
+
+msgid "mainpage.greeting"
+msgstr "Hello"
+
+msgid "mainpage.description"
+msgstr "This is a cookie"
